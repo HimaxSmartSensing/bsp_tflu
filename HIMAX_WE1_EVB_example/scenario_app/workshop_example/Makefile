@@ -300,6 +300,7 @@ CCFLAGS+= \
 -I./third_party/kissfft/tools
 
 LDFLAGS+= \
+-buildlib \
 $(MLI_PATH)/libmli.a \
 -Hheap=8192 \
 -Hnocopyr \

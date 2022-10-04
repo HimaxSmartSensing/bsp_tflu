@@ -1,8 +1,8 @@
 #=============================================================
 # Toolchain definitions
 #=============================================================
-ARC_TOOLCHAIN ?= mwdt
-#ARC_TOOLCHAIN ?= gnu
+#ARC_TOOLCHAIN ?= mwdt
+ARC_TOOLCHAIN ?= gnu
 
 ifeq ($(ARC_TOOLCHAIN), mwdt)
 	CC = ccac
@@ -281,6 +281,7 @@ CCFLAGS+= \
 -I./third_party/kissfft/tools
 
 LDFLAGS+= \
+-buildlib \
 $(MLI_PATH)/libmli.a \
 -Hheap=8192 \
 -Hnocopyr \
